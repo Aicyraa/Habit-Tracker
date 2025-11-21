@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="style.css" />
+      <title>Habit Tracker</title>
+   </head>
+   <body>
+      <main>
+         <div class="habit__container">
+            <div class="add__habit">
+               <input type="text" id="new__habit" />
+               <img src="addBtn.svg" alt="img" id="add__habit" />
+            </div>
+            <div class="habit__storage">
+               <div class="habit" id="habit_1" data-id="1">
+                  <div class="habit__details">
+                     <span>Washing Dishes</span>
+                     <h5>Streak: <span id="count"> 1</span></h5>
+                  </div>
+                  <div class="habit__btns">
+                     <button id="habit__done">Mark Done</button>
+                     <button id="habit__reset">Reset</button>
+                     <div class="habit__last__completed">
+                        <span id="completed__date"> 11/3/25</span>
+                        <span id="completed__time">8:35</span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="log__container">
+            <h4>Logs</h4>
+            <div class="logs"></div>
+         </div>
+      </main>
+   </body>
+</html>
