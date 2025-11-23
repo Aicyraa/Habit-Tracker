@@ -26,6 +26,7 @@ main {
    border: 1px solid black;
    width: 46rem;
    height: 450px;
+   padding: 8px;
 }
 /* main */
 
@@ -33,6 +34,8 @@ main {
 .habit__container {
    flex: 2 1 auto;
    padding: 0 8px;
+   border: 1px solid black;
+   height: 100%;
 }
 
 .add__habit{
@@ -42,11 +45,25 @@ main {
 }
 
 .add__habit input {
-   width: 90%;
+   width: calc(100% - 3rem);
+   padding: 4px 8px;
+   border-radius: 6px;
+   font-size: 1rem;
+   border: 2px solid black;
+}
+
+.add__habit input:focus {
+   outline: none;
 }
 
 .add__habit img {
-   border: 2px solid black;
+   width: 2rem;
+   cursor: pointer;
+   transition: 0.3s;
+}
+
+.add__habit img:hover{
+   transform: scale(1.2);
 }
 
 .habit{
@@ -54,6 +71,7 @@ main {
    justify-content: space-between;
    padding: 8px;
    border: 1px solid black;
+   margin: 6px 0;
 }
 
 .habit__details {
@@ -61,10 +79,26 @@ main {
    flex-direction: column;
 }
 
+.habit__details > span {
+   font-size: 1.2rem;
+}
+
+.habit__details h5 {
+   font-weight: bold;
+}
+
+.habit__btns{
+   min-width: 30%;
+   width: 100px;
+}
+
+.habit__btns button{
+   /* padding: 3px 6px; */
+}
+
 /* logs */
 .log__container {
    padding: 6px 5px;
-   border: 2px solid green;
    flex: 1 1 100px;
 }
 
@@ -74,5 +108,5 @@ main {
 
 .logs{
    border: 1px solid black;
-   height: 100%;
+   height: calc(100% - 25px);
 }
