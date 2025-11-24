@@ -8,6 +8,3 @@ export function setID() {
    return oldID
 }
 
-// export export function attachListerners(habit) {
-
-// }
