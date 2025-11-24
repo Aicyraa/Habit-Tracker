@@ -1,8 +1,8 @@
-export default function makeHabitInstance(habitName, habitID) {
-   let history, lastDone, id, streak;
-   streak = 0;
-   history = [];
-   lastDone = null;
+export default function makeHabitInstance(habitID, habitName, streak = 0, lastDone = null) {
+   
+   let history = [];
+   streak = streak;
+   lastDone = lastDone;
 
    function record() {
       const now = new Date().toISOString();
@@ -11,12 +11,13 @@ export default function makeHabitInstance(habitName, habitID) {
    }
 
    return {
+      // no setter for streak and lastDone
       id: habitID,
 
       get name() {
          return habitName;
       },
-
+                           
       get streak() {
          return streak;
       },
@@ -28,8 +29,6 @@ export default function makeHabitInstance(habitName, habitID) {
       markDone() {
          streak++;
          record();
-         console.log(this.name);
-         console.log(streak, lastDone);
       },
 
       clear() {

@@ -18,9 +18,12 @@ export function ReattachListeners(func) {
 }
 
 export function autosave(func){
-   return function(habit) {
-      let data = storage.load()
-      let newData = data.concat(habit)
-      func.call(this, newData) 
+   return function(habit, update = false) {
+      if(!update){
+         let data = storage.load()
+         func.call(this, data.concat(habit)) 
+      } else {
+         func.call(this, habit)
+      }
    }
 }
